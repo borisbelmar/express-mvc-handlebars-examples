@@ -1,0 +1,13 @@
+{{> navigation}}
+{{#if hasPersons}}
+<h3>El listado de personas es</h3>
+<p>Existen {{quantity}} personas</p>
+<ul>
+  {{#each persons}}
+    <li>{{this.firstName}} {{this.lastName}}</li>
+  {{/each}}
+</ul>
+{{else}}
+<h3>No hay personas que mostrar</h3>
+{{/if}}
+{{> footer}}
